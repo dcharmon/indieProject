@@ -41,9 +41,6 @@ Managing gear across different sets is a common challenge in inventory heavy gam
 
 ### [Project Plan](ProjectPlan.md)
 
-### Examples of documentation of progress, reflections, and time spent on this class
-Choose a format that works for you, or create your own.
+### Time Log
 
-#### [Weekly Refelection](WeeklyReflection.md)
-#### [Journal](Journal.md)
 #### [TimeLog](TimeLog.md)
