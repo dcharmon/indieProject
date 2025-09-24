@@ -52,6 +52,10 @@ As an admin user, I want to add new legendary effects so that users can apply th
 ### Logging (System Level) *
 As a developer/admin, I want user actions (login, add/edit/delete) logged so that I can monitor usage and troubleshoot issues.
 
+### View Armor & Effects Guide 
+
+As an unregistered user, I want to view a list of available armor types and legendary effects so that I can better understand what gear is in the game and decide if I want to register to track my own collection.
+
 
 *Denotes MVP
 
