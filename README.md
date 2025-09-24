@@ -36,7 +36,7 @@ Managing gear across different sets is a common challenge in inventory heavy gam
 ### Design
 
 * [User Stories](DesignDocuments/userStories.md)
-* [Screen Design](DesignDocuments/Screens.md)
+* [Screen Design](DesignDocuments/screen.md)
 
 
 ### [Project Plan](ProjectPlan.md)
