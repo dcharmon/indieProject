@@ -31,5 +31,47 @@ public class ArmorDaoTest {
         assertEquals("Torso", insertedArmor.getArmorSlot());
     }
 
+    @Test
+    void getByIdSuccess() {
+        Armor armor = new Armor("Combat", "Torso", "Unyielding", "Bolstering", null, null);
+        int id = armorDao.insert(armor);
 
+        Armor retrievedArmor = armorDao.getById(id);
+
+        assertNotNull(retrievedArmor);
+        assertEquals("Combat", retrievedArmor.getArmorName());
+        assertEquals("Torso", retrievedArmor.getArmorSlot());
+        assertEquals("Unyielding", retrievedArmor.getEffectOne());
+    }
+
+
+    @Test
+    void updateSuccess() {
+        Armor newArmor = new Armor("Leather", "Left Arm", "Weightless", null, null, null);
+        int id = armorDao.insert(newArmor);
+        Armor insertedArmor = armorDao.getById(id);
+        insertedArmor.setArmorSlot("Right Arm");
+        armorDao.update(insertedArmor);
+
+        Armor updatedArmor = armorDao.getById(id);
+        assertEquals("Right Arm", updatedArmor.getArmorSlot());
+    }
+
+    @Test
+    void deleteSuccess() {
+        Armor newArmor = new Armor("Marine", "Leg", null, null, null, null);
+        int id = armorDao.insert(newArmor);
+        Armor insertedArmor = armorDao.getById(id);
+        armorDao.delete(insertedArmor);
+
+        Armor deletedArmor = armorDao.getById(id);
+        assertNull(deletedArmor);
+    }
+
+    @Test
+    void getAllSuccess() {
+        List<Armor> armors = armorDao.getAll();
+        assertNotNull(armors);
+        assertTrue(armors.size() >= 0);
+    }
 }
