@@ -1,6 +1,7 @@
 package edu.matc.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
 
 /**
  * Represents an armor piece in the Armor Inventory Manager.
@@ -11,7 +12,8 @@ import jakarta.persistence.*;
 public class Armor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator="native")
+    @GenericGenerator(name = "native",strategy = "native")
     @Column(name = "armor_id")
     private int armorId;
 
